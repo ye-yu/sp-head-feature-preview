@@ -1,0 +1,7 @@
+name: HeadPet
+version: ${project.version}
+main: sp.yeyu.headpetfeature.headpet.HeadPet
+commands:
+  samplepet:
+    description: <Dev Mode> give sample head of the requested feature
+    usage: /samplepet <head name> like /samplepet sample
