@@ -19,7 +19,7 @@ Here are the attributes and description in the configuration file.
 ### Head Configuration
 We can configure each head (aka a utility head) to have a specific function based on their configuration file.
 To make an utility head, create `<utility name>.yml` file in the plugin folder.
-The file name is case-sensitive and can be obtained using `/pet <utility head name>`.
+The file name is case-sensitive, and the head can be obtained using `/pet <utility head name>`.
 For example, `Fortune Diamond.yml` is the configuration description for `Fortune Diamond` head and can be
 obtained from `/pet Fortune Diamond`.
 
