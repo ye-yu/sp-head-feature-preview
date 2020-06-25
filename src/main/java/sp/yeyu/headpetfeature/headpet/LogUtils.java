@@ -2,6 +2,7 @@ package sp.yeyu.headpetfeature.headpet;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.bukkit.plugin.java.JavaPlugin;
 
 public class LogUtils {
 
@@ -17,7 +18,7 @@ public class LogUtils {
 
     public static void info(String msg) {
         if (!DataManager.getBool(DataManager.Attrs.LOG_DEBUG)) return;
-        LOGGER.info(String.format("(%s) %s", getLastCallingClass(), msg));
+        LOGGER.info(String.format("[%s] (%s) %s", JavaPlugin.getProvidingPlugin(HeadPet.class).getName(), getLastCallingClass(), msg));
     }
 
     public static void forceInfo(String msg) {
@@ -25,6 +26,6 @@ public class LogUtils {
     }
 
     public static void error(String msg, Exception e) {
-        LOGGER.info(String.format("(%s) %s", getLastCallingClass(), msg), e);
+        LOGGER.info(String.format("[%s] (%s) %s", JavaPlugin.getProvidingPlugin(HeadPet.class).getName(), getLastCallingClass(), msg), e);
     }
 }
