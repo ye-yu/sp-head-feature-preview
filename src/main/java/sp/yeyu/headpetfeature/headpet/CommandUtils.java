@@ -24,8 +24,9 @@ public class CommandUtils {
             player = (Player) online.toArray()[random.nextInt(online.size())];
         }
         final String command = commandString.replaceAll(String.format("(%s)|(%s)", AT_RANDOM, AT_SELF), player.getDisplayName());
+        final ConsoleCommandSender cs = Bukkit.getServer().getConsoleSender();
         try {
-            player.performCommand(command);
+            Bukkit.dispatchCommand(cs, command);
             LogUtils.info(String.format("Executing command at player: %s, Command: %s", player.getDisplayName(), command));
         } catch (Exception e) {
             LogUtils.error(String.format("Cannot execute command at player: %s, Command: %s", player.getDisplayName(), command), e);
