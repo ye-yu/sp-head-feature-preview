@@ -22,6 +22,7 @@ public class HeadUtils {
     private static final String DEV_MODE = "devMode";
     private static final String DESC = "description";
     private static final String COLOR = "color";
+    private static final String INDICATOR = String.format("%sUtility Pet", ChatColor.GRAY);
 
     public static ItemStack headFromBase64(String base64) {
         ItemStack item = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
@@ -52,7 +53,9 @@ public class HeadUtils {
         final ChatColor displayColor = headFunction.getString(COLOR) == null ? ChatColor.LIGHT_PURPLE : ChatColor.getByChar(headFunction.getString(COLOR));
         itemMeta.setDisplayName(String.format("%s%s", displayColor, functionName));
         if (headFunction.getString(DESC) != null) {
-            itemMeta.setLore(Lists.newArrayList(headFunction.getString(DESC)));
+            itemMeta.setLore(Lists.newArrayList(INDICATOR, headFunction.getString(DESC)));
+        } else {
+            itemMeta.setLore(Lists.newArrayList(INDICATOR));
         }
         head.setItemMeta(itemMeta);
         player.getInventory().addItem(head);
