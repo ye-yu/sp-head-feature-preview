@@ -9,6 +9,7 @@ public final class HeadPet extends JavaPlugin {
     public void onEnable() {
         DataManager.reloadConfigurationFile();
         getCommand("pet").setExecutor(new Pet());
+        getServer().getPluginManager().registerEvents(new HeadUtils(), this);
     }
 
     @Override
