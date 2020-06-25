@@ -37,7 +37,7 @@ color: b
 The first field is `texture`. There is the <u>texture data</u> for the head encoded in Base64.
 This encoded text can be obtained from [Mineskin.org][1].
 
-The second field is `command`. This is to command to run when a player has interacted with the head.
+The second field is `command`. This is for setting the command to run when a player has interacted with the head.
 Identifier variables of `@a` (all online player), `@s` (executing player), and `@r` (random player) are supported.
 
 Finally, the last compulsory field is `devMode`. This configures the head to be obtainable in a `devMode==true`
