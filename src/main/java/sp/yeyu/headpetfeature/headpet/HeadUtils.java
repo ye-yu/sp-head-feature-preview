@@ -1,7 +1,6 @@
 package sp.yeyu.headpetfeature.headpet;
 
 import com.google.common.collect.Lists;
-import org.apache.commons.lang.StringUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
